@@ -74,10 +74,7 @@ if (option == 1)
         scanf("%f",&Amount);
           printf("Holaa!, %.2f has been sent to 0%d\n",Amount,C0);
         }
-         else  {
-          printf("Sorry, We encontered an error please try again: \n");
-        } 
-
+       
          if (option == 2)
         {
          printf("*************************************\n");
@@ -266,9 +263,6 @@ if (option ==5)
          printf("I am doing Good , How about you?");
          }
          
-         
-            
- 
  }
     return 0;
 

@@ -33,37 +33,7 @@
                 }
             ]
         },
-        {
-            "type": "OctaveDebugger",
-            "request": "launch",
-            "name": "Execute selected file.",
-            "program": "${file}",
-            "octave": "octave-cli",
-            "sourceFolder": "${workspaceFolder}"
-        },
-        {
-            "type": "OctaveDebugger",
-            "request": "launch",
-            "name": "Execute selected file.",
-            "program": "${file}",
-            "octave": "octave-cli",
-            "sourceFolder": "${workspaceFolder}"
-        },
-        {
-            "type": "OctaveDebugger",
-            "request": "launch",
-            "name": "Execute selected file.",
-            "program": "${file}",
-            "octave": "octave-cli",
-            "sourceFolder": "${workspaceFolder}"
-        },
-        {
-            "type": "octave",
-            "request": "launch",
-            "name": "Octave Debug Adapter(preview)",
-            "exec": "octave-cli",
-            "program": "${command:AskForProgramName}"
-        },
+      
         {
             "name": "C/C++: gcc-11 build and debug active file",
             "type": "cppdbg",
