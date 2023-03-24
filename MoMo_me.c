@@ -1,275 +1,370 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+
+#define PIN 1234
+//Send money things
+void sendMoney();  
+void sendMoney_VodaNet();
+void sendMoney_Other();
+void sendMoney_BankAcc();
+void sendMoney_LBankAcc();
+void sendMoney_Unregistered();
+void sendMoney_List();
+void sendMoney_Number();
+//End of Send Money things
+void WithdrawCash();
+void BuyAirtimeorData();
+void MakePayments();
+void FinancialServices();
+void MyAccount();
+void SelfService();
+void clear();
+void cancel();
 int main(){
-    int option;      float Amount;           int C3=(276651344);
-    int Toption;     int C1=(503819638);     int C4=(577133677);
-    int unumber;     int C2=(278775798);     int C5=(503298677);
-    int Boption;     int C0=(503979181);     int C6=(241082742);
-    int Moption;     int Aoption;            int Foption;   float bal;
-    char Dr1[20];        char Dr1Me[]=("how are you");
- printf("*************************************\n");
-    printf("...Welcome to MoMo_me...\n");
- printf("*************************************\n");
-    printf("1.Transfer money\n2.Momo pay\n3.Airtime/Bundles\n4.Allow cashout\n5.Financial services\n...Enter Your desired option number...:");
-scanf("%d",&option);
-//Transfer Money
-if (option == 1)
-{
-       printf("*************************************\n");
-            printf("...Transfer Money...\n");
-       printf("*************************************\n");
-               printf("1.Momo user\n");
-                  printf("2.other networks\n");
-                     printf("0.cancel\n");
-            scanf("%d",&Toption);
-        if (Toption == 1)
+    clear();
+    int UserOption;
+    printf("Welcome To EllMOMO\n");
+    printf("1. Send Money\n");
+    printf("2. Withdraw Cash\n");
+    printf("3. Buy Airtime or Data\n");
+    printf("4. Make Payments\n");
+    printf("5. Financial Services\n");
+    printf("6. My Account\n");
+    printf("7. Self Service\n");
+    printf("Enter your option: ");
+    scanf("%d",&UserOption);
+
+       switch (UserOption)
         {
-         printf("*************************************\n");
-            printf("MOMO User\n");
-         printf("*************************************\n");
-            printf("1.my contacts\n2.input contact: ");
-            scanf("%d", &Toption);
-        }
-        if (Toption == 1){
-         printf("*************************************\n");
-            printf("...My contacts...\n");
-            printf("Choose from your Contacts: \n");
-         printf("*************************************\n");
-          printf("1.0%d\n2.0%d\n3.0%d\n4.0%d\n5.0%d\n6.0%d\n7.0%d \n: ",C1,C2,C3,C4,C5,C6,C0);
-         scanf("%d", &Toption);
-        }
-        if (Toption == 1) {
-          printf("Please Enter amount to send: ");
-        scanf("%f",&Amount);
-          printf("Holaa!, %.2f has been sent to 0%d\n",Amount,C1);
-        }
-         if (Toption == 2) {
-          printf("Please Enter amount to send: ");
-        scanf("%f",&Amount);
-          printf("Holaa!, %.2f has been sent to 0%d\n",Amount,C2);
-        }
-         if (Toption == 3) {
-          printf("Please Enter amount to send: ");
-        scanf("%f",&Amount);
-          printf("Holaa!, %.2f has been sent to 0%d\n",Amount,C3);
-        }
-         if (Toption == 4) {
-          printf("Please Enter amount to send: ");
-        scanf("%f",&Amount);
-          printf("Holaa!, %.2f has been sent to 0%d\n",Amount,C4);
-        }
-         if (Toption == 5) {
-          printf("Please Enter amount to send: ");
-        scanf("%f",&Amount);
-          printf("Holaa!, %.2f has been sent to 0%d\n",Amount,C5);
-        }
-         if (Toption == 6) {
-          printf("Please Enter amount to send: ");
-        scanf("%f",&Amount);
-          printf("Holaa!, %.2f has been sent to 0%d\n",Amount,C6);
-        }
-         if (Toption == 7) {
-          printf("Please Enter amount to send: ");
-        scanf("%f",&Amount);
-          printf("Holaa!, %.2f has been sent to 0%d\n",Amount,C0);
-        }
-         else  {
-          printf("Sorry, We encontered an error please try again: \n");
-        } 
-
-         if (option == 2)
-        {
-         printf("*************************************\n");
-            printf("...Sorry we dont support sending to other networks yet...\n");
-         printf("*************************************\n");
-        }
-         if (option == 0)
-        {
-         printf("*************************************\n");
-            printf("Bye!! Use us if you want to\n");
-         printf("*************************************\n");
-        }
-}     
-
-//MOMO pay
-if (option ==2)
-{
-         printf("*************************************\n");
-            printf("MOMO pay\n");
-         printf("*************************************\n");
-            printf("Sorry we dont support MOMO pay yet!, come back later...\n");
-         
- 
- }
-
- //Airtime/Bundles
-if (option ==3)
-{
-         printf("*************************************\n");
-            printf("...Airtime/Bundles...\n"); 
-         printf("*************************************\n");
-            printf("1.Airtime\n2.Bundle\n:");
-         scanf("%d",&option);
-         if (option ==1)
-         {
-            printf("*************************************\n");
-            printf("Exiting Airtime offers for you!\n");
-            printf("*************************************\n");
-            printf("1.0.5p\n2.1GH\n3.2GH\n4.5GH\n5.10GH\n6.20GH\n:");
-            scanf("%d",&Aoption);
-         }
-         if (Aoption == 1)
-         {
-            printf("Press 1 to confirm your purchase : ");
-            scanf("%d",&Aoption);
-            printf("Y'ello, an airtime amount of %f cedis has been added to your account\n",0.5);
-
-         
-         }
-         else if (Aoption == 2) {
-            printf("Press 1 to confirm your purchase : ");
-            scanf("%d",&Aoption);
-            printf("Y'ello, an airtime amount of %d cedis has been added to your account\n",1);
-         
-         }
-         else if (Aoption == 3) {
-            printf("Press 1 to confirm your purchase : ");
-            scanf("%d",&Aoption);
-            printf("Y'ello, an airtime amount of %d cedis has been added to your account\n",2);
-         
-         }
-         else if (Aoption == 4) {
-            printf("Press 1 to confirm your purchase : ");
-            scanf("%d",&Aoption);
-            printf("Y'ello, an airtime amount of %d cedis has been added to your account\n",5);
-         
-         }
-         else if (Aoption == 5) {
-            printf("Press 1 to confirm your purchase : ");
-            scanf("%d",&Aoption);
-            printf("Y'ello, an airtime amount of %d cedis has been added to your account\n",10);
-         
-         }
-         else if (Aoption == 6) {
-            printf("Press 1 to confirm your purchase : ");
-            scanf("%d",&Aoption);
-            printf("Y'ello, an airtime amount of %d cedis has been added to your account\n",20);
-         
-         }
-      if (option == 2)
-      {
-      printf("*************************************\n");
-            printf("Exiting Data offers for you!\n");
-            printf("*************************************\n");
-            printf("1.25MB @0.5p\n2.60MB @.1GH\n3.125MB @.2GH\n4.600MB @5GH\n5.1.5GB @10GH\n6.2.5GB @20GH\n:");
-            scanf("%d",&Boption);
-      }
-      if (Boption == 1)
-         {
-            printf("Press 1 to confirm your purchase : ");
-            scanf("%d",&Boption);
-            printf("Y'ello, You have puchased 25MB of data\n");
-
-         
-         }
-      else if (Boption == 2) {
-            printf("Press 1 to confirm your purchase : ");
-            scanf("%d",&Boption);
-            printf("Y'ello, You have puchased 60MB of data\n");
-         
-         }
-      else if (Boption == 3) {
-            printf("Press 1 to confirm your purchase : ");
-            scanf("%d",&Boption);
-            printf("Y'ello, You have puchased 125MB of data\n");
-         
-         }
-      else if (Boption == 4) {
-            printf("Press 1 to confirm your purchase : ");
-            scanf("%d",&Boption);
-            printf("Y'ello, You have puchased 600MB of data\n");
-         
-         }
-      else if (Boption == 5) {
-            printf("Press 1 to confirm your purchase : ");
-            scanf("%d",&Boption);
-            printf("Y'ello, You have puchased 1.5GB of data\n");
-         
-         }
-      else if (Boption == 6) {
-            printf("Press 1 to confirm your purchase : ");
-            scanf("%d",&Boption);
-            printf("Y'ello, You have puchased 2.5GB of data\n");
-         
-         }
-}
-
-//Allow cashout
-if (option ==4)
-{
-         printf("*************************************\n");
-            printf("Allow Cashout\n");
-         printf("*************************************\n");
-            printf("Enter agent till number: ");
-            scanf("%d",&option);
-            printf("Are you sure you want to allow cashout? \n1.Confirm Cashout \n2.Cancel\a\n");
-            scanf("%d",&option);
-            printf("Wait to enter you momo pin to recieve payments:\b\n");
-            
- 
- }
-
- //Financial Services
-if (option ==5)
-{
-         printf("*************************************\n");
-            printf("Financial Services\n");
-         printf("*************************************\n");
-            printf("\n1.My account\n2.Loan\n3.Dr.Jiggy\n");
-            scanf("%d",&option);
-            if (option == 1)
-         {
-           printf("*************************************\n");
-            printf("My Account\n");
-         printf("*************************************\n");
-            printf("\n1.account balance\n2.mini statements\n3.request statement\n");
-            scanf("%d",&Foption);
-         
-         }
-            else if (Foption == 1) {
-            printf("Y'ello, your account balance is %.2f (GHC)\n",bal);
-         
-         }
-            else if (Foption == 2) {
-            printf("Y'ello, Please hold on a little bit your mini statement will be sent to you via sms\n");
-         
-         }
-            else if (Foption == 4) {
-            printf("1.Confirm statement request\a\n");
-         
-         }
-            if (option == 2) {
-
-         printf("*************************************\n");
-            printf("Sorry you're not qualified for the techJigger loan, try again later!");
-         printf("*************************************\n");
-         }
+        case 1:
+             sendMoney();
+            break;
         
-              if (option == 3) {
+        case 2:
+             WithdrawCash();
+            break;
+        case 3:
+             BuyAirtimeorData();
+            break;
+         case 4:
+             MakePayments();
+            break;
+         case 5:
+             FinancialServices();
+            break;
+        case 6:
+             MyAccount();
+            break;
+        case 7:
+             SelfService();
+            break;
+        
+        default:
+        main();
+        
+        }
+}
+void clear(){
+    system("clear");
+}
+void cancel(){
+    printf(".");
+}
 
-         printf("*************************************\n");
-            printf("Welcome to Dr.Jiggy!\nHow may I help you?\n");
-         printf("*************************************\n");
-         printf("Ask me something?\a\n");
-         scanf("%s",Dr1);        
-         printf("I am doing Good , How about you?");
-         }
-         
-         
-            
- 
- }
-    return 0;
+//Send money
+void sendMoney(){
+        int UserOption;
+        clear();
+        printf("Send Money\n");
+    printf("1. Vodafone Networks\n");
+    printf("2. Other Networks\n");
+    printf("3. To Bank Account\n");
+    printf("4. From Linked Bank Account\n");
+    printf("6. To unregistered\n");
+    printf("0. Back\n");
+    scanf("%d",&UserOption);
+
+        switch (UserOption)
+        {
+        case 1:
+             sendMoney_VodaNet();
+            break;
+        
+        case 2:
+             sendMoney_Other();
+            break;
+        case 3:
+             sendMoney_BankAcc();
+            break;
+         case 4:
+             sendMoney_LBankAcc();
+            break;
+        case 6:
+            sendMoney_Unregistered();
+            break;
+        case 0:
+             main();
+            break;
+        
+        default:
+        main();
+        
+        }
+
+    }
+void sendMoney_VodaNet(){
+
+    clear();
+    int UserOption;
+    printf("Choose the reciever\n");
+    printf("1. To enter recipient number\n");
+    printf("2. My list\n");
+    printf("0. Return to main menu\n");
+    scanf("%d",&UserOption);
+    switch (UserOption)
+        {
+        case 1:
+             sendMoney_Number();
+            break;
+        
+        case 2:
+             sendMoney_List();
+            break;
+        
+        case 0:
+             main();
+            break;
+        
+        default:
+        main();
+        
+        }
+}
+void sendMoney_Number(){
+    clear();
+    int Unumber1, Unumber2, matchCheck, Amount, pin, UserOption;
+    printf("Enter recipient phone number\n");
+    scanf("%d",&Unumber1);
+    printf("Repeat recipient phone number\n");
+    scanf("%d",&Unumber2);
+    if (Unumber1 == Unumber2)
+    {
+        clear();
+        printf("Enter Amount\n");
+        scanf("%d",&Amount);
+        clear();
+        printf("Enter PIN\n");
+        scanf("%d",&pin);
+        if (pin == PIN)
+        {
+            clear();
+            printf("1.confirm purchase\n2. cancel\n");
+            scanf("%d",&UserOption);
+            switch (UserOption)
+            {
+           
+            default:
+           printf("In progress");
+                break;
+            }
+        }
+        
+        else{
+            printf("You entered a wrong PIN,please try again\n");
+        }
+        
+    }
+    else{
+        clear();
+         printf("User numbers do not match, check and continue\n");
+    printf("1. Retry\n");
+    printf("0. cancel\n");
+    scanf("%d",&matchCheck);
+        switch (matchCheck)
+        {
+        case 1:
+            sendMoney_Number();
+            break;
+        case 0:
+            cancel();
+            break;
+        
+        default:
+            main();
+            break;
+        }
+        
+    }
+       
+}
+void sendMoney_List(){
+    
+}
+void sendMoney_Other(){
+    clear();
+    int UserOption;
+    printf("Please choose network");
+    printf("1. MTN\n");
+    printf("2. AirtelTigo\n");
+    printf("3. G-Money\n");
+    printf("4. ZeePay\n");
+    printf("5. GhanaPay\n");
+    scanf("%d",&UserOption);
+    switch (UserOption)
+        {
+        case 1:
+             sendMoney_Number();
+            break;
+        
+        case 2:
+             sendMoney_List();
+            break;
+        
+        case 0:
+             main();
+            break;
+        
+        default:
+        main();
+        
+        }
+}
+void sendMoney_BankAcc(){
+     int UserOption;
+    printf("Select your bank starting with the alphabet:\n");
+    printf("1. A-D\n");
+    printf("2. E-F\n");
+    printf("3. G-R\n");
+    printf("4. S-Z\n");
+    printf("0. Return to main menu\n");
+    scanf("%d",&UserOption);
+}
+void sendMoney_LBankAcc(){
 
 }
+void sendMoney_Unregistered(){
+
+}
+ //end of Send Money things
+
+
+// Withdraw Cash
+    void WithdrawCash(){
+        int UserOption, Till, Amount, pin;
+        clear();
+        printf("Withdraw Cash\n");
+    printf("1. From Agent\n");
+    printf("2. From ATM\n");
+    printf("0. Back\n");
+    scanf("%d",&UserOption);
+    switch (UserOption)
+    {
+    case 1:
+
+        printf("Enter agent till number\n");
+        scanf("%d",&Till);
+        printf("Enter Amount\n");
+        scanf("%d",&Amount);
+        clear();
+        printf("Enter PIN\n");
+        scanf("%d",&pin);
+        if (pin == PIN)
+        {
+            clear();
+            printf("1.confirm purchase\n2. cancel\n");
+            scanf("%d",&UserOption);
+            switch (UserOption)
+            {
+
+            default:
+          printf("In progress");
+                break;
+                break;
+            }
+        break;
+    case 2:
+        printf("Sorry we dont support that yet\n");
+        break;
+    case 0:
+    sendMoney();
+    
+    default:
+    main();
+        break;
+    }else{
+          printf("You entered a wrong PIN,please try again\n");
+        
+    }
+    }
+    }
+    
+
+//Buy Airtime or Data
+
+    void BuyAirtimeorData(){
+        clear();
+        printf("Buy Airtime or Data\n");
+    printf("1.Buy Airtime\n");
+    printf("2. Buy Data or 2Moorch \n");
+    printf("3. Special Offers\n");
+    
+
+    }
+//Make Payments
+    void MakePayments(){
+        clear();
+        printf("Make Payments\n");
+    printf("1. Pay Bill\n");
+    printf("2. Buy Goods\n");
+    printf("3. Fun and Games\n");
+    printf("4. Generate Voucher   \n");
+    printf("5. My List\n");
+    printf("6. Pay Small Small\n");
+    printf("7. Donations\n");
+    printf("8. Complete Payments/ Transactions\n");
+    printf("9. Schemes\n");
+    printf("10. School Payments\n");
+    printf("0. Back\n");
+
+    }
+    
+//Financial Services
+    void FinancialServices(){
+        clear();
+        printf("Financial Services\n");
+    printf("1. Insurance\n");
+    printf("2. Pensions\n");
+    printf("3. Loans\n");
+    printf("4. Over Draft\n");
+    printf("5. Savings\n");
+    printf("6. Bank Services\n");
+    printf("0. Back\n");
+
+    }
+
+//My Account
+    void MyAccount(){
+        clear();
+        printf("My Account\n");
+    printf("1. Check Balance\n");
+    printf("2. My Statements\n");
+    printf("3. Change Pinn");
+    printf("4. Account Information\n");
+    printf("5. My List\n");
+    printf("6. Help\n");
+    printf("7. Self Services\n");
+    printf("0. Back\n");
+
+    }
+    
+
+//Self Service
+    void SelfService(){
+        clear();
+        printf("Select Action\n");
+    printf("1. Reset PIN\n");
+    printf("2. Self Reversal(Vodafone/Voucher)\n");
+    printf("3. TRequest Reversal(Other Networks)\n");
+   
+    }
+  
