@@ -1,9 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 int main(){
+       system("clear");
+
    int i;
    int j=1;
-   for (size_t i = 99; i > 0; i--)
+
+   int test;   //i implemented the asking part for Fun but it's nice so i'll leave and come back to make it better
+   printf("How many bottles of beer do you want me to sing for? \n"); 
+   printf("*******************************************************\n");
+   scanf("%d",&test);
+   system("clear");
+
+   for (size_t i = test; i > 0; i--)
    {
 
          if (i ==1) {
@@ -17,7 +26,7 @@ int main(){
    }
         if (i == 0)
         {
-            printf("No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more,99 botles of beer on the wall\n");
+            printf("No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more,%d botles of beer on the wall\n",test);
         }
    
 
