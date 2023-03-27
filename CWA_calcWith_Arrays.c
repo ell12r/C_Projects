@@ -5,6 +5,7 @@ int main(){
     int NCourses, IndexNo, RefNo, totalCredit=0;
     float totalSum;
     char Fname[20], Lname[20];
+    printf("...WELCOME TO THE SWA GENERATION SYSTEM...\n\n\a");
     printf("Enter your full name: ");
     scanf("%s %s", Fname, Lname);
     printf("Enter your index number: ");
@@ -16,6 +17,7 @@ int main(){
     int Marks[NCourses], CreditHours[NCourses];
     char **Code_array = malloc(NCourses * sizeof(char *));
     printf("\n\nEnter the course code, Mark and credit hour: \n");
+
     for (size_t i = 0; i < NCourses; i++)
     {
         char *code = malloc(100 * sizeof(char));
@@ -29,7 +31,7 @@ int main(){
     printf("Index Number: %d\n",IndexNo);
     printf("Reference Number: %d\n",RefNo);
     printf("...........................................................................................................................\n");
-    printf("Course Code          |       Marks        |       Credit Hour(s)      |       Total Mark     |\n");
+    printf(" Course Code         |       Mark         |       Credit Hour(s)      |       Total Mark    |\n");
     printf("...........................................................................................................................\n");
     for (size_t i = 0; i < NCourses; i++)
     {
@@ -42,7 +44,7 @@ int main(){
     printf("...........................................................................................................................\n");
     }
     float SWA= totalSum/totalCredit;
-    printf("                                                            SWA       |       %.2f          |\n",SWA);
+    printf("                                                             SWA      |       %.2f         |\n",SWA);
     printf("...........................................................................................................................\n");
    
     return 0;
