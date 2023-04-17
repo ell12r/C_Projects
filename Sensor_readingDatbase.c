@@ -109,7 +109,7 @@ int main(){
 //Function to send users the link of the sourceCode of this project
     void gitLink(){
  system("clear");
-            printf("Hooo Buddy!, This is an OpenSource Project I built myself.\nUse the link below to access the source code for free and also feel free to email me when you don't understand anything @elliottransford2@gmail.com\ngit  Link: \nYouTube link: \nLinkedIn: \n\n");
+            printf("Hooo Buddy!, This is an OpenSource Project I built myself.\nUse the link below to access the source code for free and also feel free to email me when you don't understand anything @elliottransford2@gmail.com\ngit  Link: https://github.com/ell12r/C_Projects/edit/master/Sensor_readingDatbase.c\nYouTube link: \nLinkedIn: \n\n");
         
             printf("Thank you for trying this out.\n\a");
 }
