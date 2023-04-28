@@ -5,10 +5,8 @@ int main(){
     int NCourses, IndexNo, RefNo, totalCredit=0;
     float totalSum;
     char Fname[20], Lname[20];
-<<<<<<< HEAD
+
     printf("...WELCOME TO THE SWA GENERATION SYSTEM...\n\n\a");
-=======
->>>>>>> ccf475ec08089621c9320d935bc0ad1e91a31d90
     printf("Enter your full name: ");
     scanf("%s %s", Fname, Lname);
     printf("Enter your index number: ");
@@ -20,10 +18,6 @@ int main(){
     int Marks[NCourses], CreditHours[NCourses];
     char **Code_array = malloc(NCourses * sizeof(char *));
     printf("\n\nEnter the course code, Mark and credit hour: \n");
-<<<<<<< HEAD
-
-=======
->>>>>>> ccf475ec08089621c9320d935bc0ad1e91a31d90
     for (size_t i = 0; i < NCourses; i++)
     {
         char *code = malloc(100 * sizeof(char));
@@ -37,11 +31,10 @@ int main(){
     printf("Index Number: %d\n",IndexNo);
     printf("Reference Number: %d\n",RefNo);
     printf("...........................................................................................................................\n");
-<<<<<<< HEAD
+
     printf(" Course Code         |       Mark         |       Credit Hour(s)      |       Total Mark    |\n");
-=======
     printf("Course Code          |       Marks        |       Credit Hour(s)      |       Total Mark     |\n");
->>>>>>> ccf475ec08089621c9320d935bc0ad1e91a31d90
+
     printf("...........................................................................................................................\n");
     for (size_t i = 0; i < NCourses; i++)
     {
@@ -54,11 +47,9 @@ int main(){
     printf("...........................................................................................................................\n");
     }
     float SWA= totalSum/totalCredit;
-<<<<<<< HEAD
+
     printf("                                                             SWA      |       %.2f         |\n",SWA);
-=======
     printf("                                                            SWA       |       %.2f          |\n",SWA);
->>>>>>> ccf475ec08089621c9320d935bc0ad1e91a31d90
     printf("...........................................................................................................................\n");
    
     return 0;
